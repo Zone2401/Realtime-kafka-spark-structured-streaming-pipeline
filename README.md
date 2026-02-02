@@ -13,6 +13,7 @@ A scalable real-time data pipeline that ingests API data via Apache Airflow, str
 ## Architecture
 
 
+<img width="1192" height="733" alt="{6FD74F86-EB29-470A-B912-A23D349D0EEC}" src="https://github.com/user-attachments/assets/4cc353b3-f9c4-45b9-9dc4-ced876c1852a" />
 
 
 
@@ -22,7 +23,7 @@ A scalable real-time data pipeline that ingests API data via Apache Airflow, str
 ### 1. Clone Repository
 
 ```bash
-git clone [your-repo-url]
+git clone [my-repo-url]
 cd streaming_prj
 ```
 
@@ -57,7 +58,8 @@ Wait for all services to be healthy (approximately 2-3 minutes).
 2. Enable the `push_data_to_broker` DAG
 3. Trigger the DAG manually or wait for scheduled execution
 
-![Airflow DAG](screenshots/airflow_dag.png)
+<img width="1920" height="874" alt="{53F02FDB-09B7-45BC-AE0F-39D00DFA4568}" src="https://github.com/user-attachments/assets/d04ef4d1-b82c-40fb-99e1-9a057ca12a14" />
+
 
 ### 3. Monitor Kafka via Control Center
 
@@ -65,13 +67,14 @@ Access Confluent Control Center: **http://localhost:9021**
 
 Check ZooKeeper, Kafka broker, and topics status.
 
-![Control Center](screenshots/control_center.png)
+<img width="735" height="880" alt="{DC9A233A-E5DA-47D2-BA5E-3AA08BDAC577}" src="https://github.com/user-attachments/assets/a538b908-52fe-4400-ad41-73bea02edce0" />
+
 
 ### 4. Verify Data in Kafka Topic
 
 Navigate to **Topics** → `users_profile` to view messages.
 
-![Kafka Messages](screenshots/kafka_messages.png)
+<img width="1903" height="878" alt="{8D39A2B3-16D4-4C13-BFA6-45E2B5581312}" src="https://github.com/user-attachments/assets/d341560d-a5da-416f-9c4e-df2a0a5aca20" />
 
 
 
@@ -82,7 +85,7 @@ Navigate to **Topics** → `users_profile` to view messages.
 docker exec --user root spark-master bash -c "spark-submit --master spark://spark-master:7077 --conf 'spark.driver.extraJavaOptions=-Duser.home=/tmp' --packages com.datastax.spark:spark-cassandra-connector_2.12:3.4.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.1 /opt/bitnami/spark/jobs/spark_streaming.py" 
 ```
 
-![Spark Submit](screenshots/spark_submit.png)
+<img width="1316" height="280" alt="{CD688771-6ACE-4172-976B-6E251A44A695}" src="https://github.com/user-attachments/assets/606af4b0-9220-40d8-877c-300f03cf8950" />
 
 ### 6. Verify Data in Cassandra
 If Cassandra not found
@@ -96,7 +99,7 @@ USE spark_streams;
 SELECT * FROM users_profile LIMIT 10;
 ```
 
-![Cassandra Query](screenshots/cassandra_query.png)
+<img width="1397" height="827" alt="{2598709D-2AAD-44A8-9156-4B8C3516E63E}" src="https://github.com/user-attachments/assets/6da91890-2fad-4491-837f-1c7d316b8c55" />
 
 ## Key Components
 
