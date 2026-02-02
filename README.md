@@ -1,6 +1,6 @@
 # Real-time User Data Pipeline with Airflow, Kafka, Spark Structured Streaming, and Cassandra
 
-A data pipeline that streams user data from an API, processes it in real-time, and stores it in Cassandra.
+A scalable real-time data pipeline that ingests API data via Apache Airflow, streams events with Kafka, performs real-time processing using Spark Structured Streaming, and stores processed data in Cassandra.
 
 ## Technologies Used
 
