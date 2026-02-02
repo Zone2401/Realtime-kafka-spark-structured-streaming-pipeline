@@ -101,3 +101,5 @@ secrets/
 *.pem
 *.key
 *.crt
+
+webserver_config.py
