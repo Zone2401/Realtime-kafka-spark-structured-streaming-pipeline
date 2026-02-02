@@ -103,3 +103,5 @@ secrets/
 *.crt
 
 webserver_config.py
+
+.gitignore
