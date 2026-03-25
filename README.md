@@ -12,6 +12,7 @@ A scalable real-time data pipeline that ingests API data via Apache Airflow, str
 
 ## Architecture
 
+<img width="1185" height="723" alt="{6C1893F3-8F6E-453E-B0A2-1EA57286E888}" src="https://github.com/user-attachments/assets/9b086a20-d664-4c30-959e-8b73fa2d5229" />
 
 
 
@@ -66,7 +67,7 @@ Access Confluent Control Center: **http://localhost:9021**
 
 Check ZooKeeper, Kafka broker, and topics status.
 
-<img width="1185" height="723" alt="{6C1893F3-8F6E-453E-B0A2-1EA57286E888}" src="https://github.com/user-attachments/assets/9b086a20-d664-4c30-959e-8b73fa2d5229" />
+<img width="740" height="915" alt="{AB25D569-C3BE-45CC-9157-FC6847224BFA}" src="https://github.com/user-attachments/assets/73aff6db-dd2c-484d-8529-751d7ddcaca2" />
 
 
 ### 4. Verify Data in Kafka Topic
@@ -85,7 +86,8 @@ Navigate to **Topics** → `users_profile` to view messages.
 docker exec --user root spark-master bash -c "spark-submit --master spark://spark-master:7077 --conf 'spark.driver.extraJavaOptions=-Duser.home=/tmp' --packages com.datastax.spark:spark-cassandra-connector_2.12:3.4.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.1 /opt/bitnami/spark/jobs/spark_streaming.py" 
 ```
 
-![Spark Submit](screenshots/spark_submit.png)
+<img width="868" height="196" alt="{D8F3FC0D-729B-4FC8-83D2-D9C167637859}" src="https://github.com/user-attachments/assets/b9f78d7b-efe0-476a-864f-75e9ee7b239b" />
+
 
 ### 6. Verify Data in Cassandra
 If Cassandra not found
@@ -99,7 +101,8 @@ USE spark_streams;
 SELECT * FROM users_profile LIMIT 10;
 ```
 
-![Cassandra Query](screenshots/cassandra_query.png)
+<img width="1750" height="544" alt="{A693368A-5FD6-4A66-922A-6DE6E7EA8575}" src="https://github.com/user-attachments/assets/f27d5326-0633-4e26-9294-722dddb98e03" />
+
 
 ## Key Components
 
