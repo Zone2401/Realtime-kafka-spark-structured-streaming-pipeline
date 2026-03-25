@@ -23,7 +23,7 @@ A scalable real-time data pipeline that ingests API data via Apache Airflow, str
 ### 1. Clone Repository
 
 ```bash
-git clone [your-repo-url]
+git clone [https://github.com/Zone2401/Realtime-kafka-spark-structured-streaming-pipeline]
 cd streaming_prj
 ```
 
