@@ -1,13 +1,14 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -euo pipefail
 
-if [ -e "/opt/airflow/requirements.txt" ]; then
-  $(command python) pip install --upgrade pip
-  $(command -v pip) install --user -r requirements.txt
+if [ -f "/opt/airflow/requirements.txt" ]; then
+  python -m pip install --upgrade pip
+  python -m pip install --no-cache-dir --user -r /opt/airflow/requirements.txt
 fi
 
-if [ ! -f "/opt/airflow/airflow.db" ]; then
-  airflow db init && \
+airflow db upgrade
+
+if ! airflow users list | grep -q "admin"; then
   airflow users create \
     --username admin \
     --firstname admin \
@@ -16,7 +17,5 @@ if [ ! -f "/opt/airflow/airflow.db" ]; then
     --email admin@example.com \
     --password admin
 fi
-
-$(command -v airflow) db upgrade
 
 exec airflow webserver

@@ -5,7 +5,7 @@ from streaming_to_kafka import load_to_kafka
 default_args = {
     'owner': 'Ducnguyen',
     'start_date': datetime(2026, 1, 21),
-    'depend_on_past': False
+    'depends_on_past': False
 }
 
 
