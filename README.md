@@ -57,7 +57,8 @@ Wait for all services to be healthy (approximately 2-3 minutes).
 2. Enable the `push_data_to_broker` DAG
 3. Trigger the DAG manually or wait for scheduled execution
 
-![Airflow DAG](screenshots/airflow_dag.png)
+<img width="1854" height="403" alt="{D5282AFE-E5D2-4A1E-BA17-BEED13CAFB20}" src="https://github.com/user-attachments/assets/65e07c8a-3cdb-470f-8935-fde1f87e61b7" />
+
 
 ### 3. Monitor Kafka via Control Center
 
@@ -65,13 +66,15 @@ Access Confluent Control Center: **http://localhost:9021**
 
 Check ZooKeeper, Kafka broker, and topics status.
 
-![Control Center](screenshots/control_center.png)
+<img width="1185" height="723" alt="{6C1893F3-8F6E-453E-B0A2-1EA57286E888}" src="https://github.com/user-attachments/assets/9b086a20-d664-4c30-959e-8b73fa2d5229" />
+
 
 ### 4. Verify Data in Kafka Topic
 
 Navigate to **Topics** → `users_profile` to view messages.
 
-![Kafka Messages](screenshots/kafka_messages.png)
+<img width="1896" height="913" alt="{E86967AE-C346-471E-89C8-D92A25C95D20}" src="https://github.com/user-attachments/assets/01667f91-d3ab-4441-b204-9fc068a73875" />
+
 
 
 
